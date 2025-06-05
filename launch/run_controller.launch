@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+    <rosparam file="$(find motion_tube_planner)/params/controller.yaml" command="load" ns="controller/" />
+
+    <node name="controller" pkg="motion_tube_planner" type="controller" output="screen"/>
+
+</launch>

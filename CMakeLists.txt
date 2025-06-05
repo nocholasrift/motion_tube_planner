@@ -10,6 +10,9 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   sensor_msgs
   std_msgs
+  tf
+  tf2_ros
+  tf2_eigen
 )
 
 catkin_package(
@@ -27,6 +30,7 @@ include_directories(
 add_executable(controller
   src/controller_node.cpp
   src/controller.cpp
+  src/template_generator.cpp
 )
 target_link_libraries(controller
   ${catkin_LIBRARIES}
